@@ -1,0 +1,58 @@
+<div class="container">
+  <h2 class="text-center mb-3">Lista de Usuarios
+    <a routerLink="./new" class="btn btn-secondary text-white" style="cursor: pointer;">Nuevo usuario</a>
+    
+  </h2>
+
+  <form class="col-md-8 col-sm-12">
+      <div class="form-group form-inline">
+          <label>Busqueda de usuario:</label>
+          <input class="form-control ml-3" type="text" [formControl]="filter" />
+      </div>
+  </form>
+
+  <table class="table table-bordered table-striped text-center">
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Email</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Creado</th>
+              <th scope="col">Actualizado</th>
+              <th scope="col">Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of users | async; index as i ">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>
+                {{user.name}}  
+                <!-- <ngb-highlight [result]="user.name" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                {{user.lastname}}  
+                <!-- <ngb-highlight [result]="user.lastname" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                {{user.email}}  
+                <!-- <ngb-highlight [result]="user.email" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>{{ user.status === 1 ? 'Activado' : 'Desactivado' }}</td>
+              <td>{{ user.created_at | date: 'dd/MM/yy' }}</td>
+              <td>{{ user.updated_at | date: 'dd/MM/yy' }}</td>
+              <td>
+                  <div class="text-center">
+                      <button class="btn btn-primary btn-sm mr-2" type="button" (click)="onUpdateUser(user)">Actualizar</button>
+                      <button class="btn btn-danger btn-sm" [disabled]="user.status === 2" (click)="onRemoveUser(user)" type="button">Eliminar</button>
+                  </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="d-flex justify-content-center">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+</div>
+</div>

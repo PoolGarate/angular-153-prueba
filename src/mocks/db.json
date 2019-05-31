@@ -1,0 +1,63 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Manuel",
+        "lastname": "Del Pozo",
+        "email": "madepozo@gmail.com",
+        "password": "123456",
+        "status": 1,
+        "created_at": 1558021184699,
+        "updated_at": 1558163825056
+      },
+      {
+        "id": 2,
+        "name": "Diego",
+        "lastname": "Flores",
+        "email": "diego1@gmail.com",
+        "password": "123456",
+        "status": 2,
+        "created_at": 1558021172800,
+        "updated_at": 1558155228836
+      },
+      {
+        "id": 3,
+        "name": "Lucia",
+        "lastname": "Martinez",
+        "email": "lucia@gmail.com",
+        "password": "123456",
+        "status": 2,
+        "created_at": 1558021172800,
+        "updated_at": 1558155226619
+      },
+      {
+        "id": 3,
+        "name": "Felipe",
+        "lastname": "Aguilar",
+        "email": "felipe@gmail.com",
+        "password": "facilito1",
+        "status": 2,
+        "created_at": 1558158964922,
+        "updated_at": 1558158964922
+      },
+      {
+        "created_at": 1558159017042,
+        "updated_at": 1558159017042,
+        "status": 2,
+        "name": "Ana",
+        "email": "ana@gmail.com",
+        "lastname": "Chirinos",
+        "password": "anita123",
+        "id": 4
+      },
+      {
+        "created_at": 1558162308417,
+        "updated_at": 1558162308417,
+        "status": 2,
+        "name": "Miranda",
+        "email": "miranda@gmail.com",
+        "lastname": "Palomino",
+        "password": "holamundo",
+        "id": 5
+      }
+    ]}
